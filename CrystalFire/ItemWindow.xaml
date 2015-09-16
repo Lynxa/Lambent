@@ -1,0 +1,91 @@
+﻿<Window x:Class="CrystalFire.ItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Item details" Height="288" Width="290" Topmost="True" SizeToContent="Height"
+        >
+    <Grid>
+        
+        <Grid.Resources>
+            <DataTemplate x:Key="KVPItemTemplate">
+
+                <Grid Width="260" Height="Auto">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="85"></ColumnDefinition>
+                            <ColumnDefinition Width="175"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="LightSlateGray" BorderThickness="1" CornerRadius="4" Grid.ColumnSpan="2">
+
+                    </Border>
+                    <TextBlock 
+                        Text="{Binding Path=Key}"
+                        VerticalAlignment="Center"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Margin="5,7,0,7"
+                        />
+                    <TextBlock 
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text = "{Binding Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                        TextWrapping="Wrap"
+                        Foreground="DarkRed"
+                        VerticalAlignment="Center"
+                        Margin="5,7,0, 7"
+                        />
+
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <Grid Width="268" Height="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="268"></ColumnDefinition>
+                
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Border Name="brd1" BorderBrush="{Binding}" BorderThickness="2" CornerRadius="4" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Background="{Binding Path=Borderbrush2}" />
+
+                
+            <WrapPanel Grid.Row="0">
+                <Image 
+                    Name="itmImage" Source="{Binding}"
+                    Margin="5,3,0,0"
+                    />
+                <TextBlock
+                    Name="itmTitle" Text="{Binding}" VerticalAlignment="Center" 
+                    
+                    />
+            </WrapPanel>
+            <ListBox Name="listBox1" Grid.Row="1"
+                             ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" 
+                             ItemTemplate="{StaticResource KVPItemTemplate}" 
+                             BorderThickness="0"  Margin="2,5"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                    <TextBlock Text="State: " />
+                    <TextBlock Name="StateText" Text="{Binding}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                    <TextBlock Text="Time: " />
+                    <TextBlock Name="TimeText" Text="{Binding}"/>
+                </StackPanel>
+         </Grid>
+      </Grid>
+
+
+    </Grid>
+</Window>

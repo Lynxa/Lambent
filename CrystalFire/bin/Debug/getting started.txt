@@ -1,0 +1,47 @@
+============================================================================
+DAMMAGE - A Framework for Describing And Monitoring Multi-AGent Environments
+Version: 1.1  Release: 01/07/2015  Author: Loizos Michael (loizos@ouc.ac.cy)
+============================================================================
+
+Installation and execution instructions:
+----------------------------------------
+
+01. Decompress and place the distributed system files into a new folder. Let
+	`%DAMMAGE%` be the path where the distributed system files are placed.
+
+02. Obtain ECLiPSe (from `http://eclipseclp.org/Distribution/6.0_188/i386_nt/`
+	or `%DAMMAGE%\utils\`), and install it following the instructions given
+	by the application. Let `%ECLIPSE%` be the path where ECLiPSe is installed.
+	
+03. Copy all files found in `%ECLIPSE%\lib\i386_nt\` into `%DAMMAGE%\utils\`.
+
+04. If needed, the host and sockets used for communication between the modules
+	of the system can be changed, by editing the command files in `%DAMMAGE%\`.
+	By changing the host names, it is possible to have each module run on some
+	different machine, and communicate with other modules over some network.
+
+05. Once the system is installed, its modules can be activated by executing the
+	command files in `%DAMMAGE%` in the numbered order, from 1 through 5. In
+	case the modules will be running on different machines, they should still
+	be executed in the prescribed order, each on its respective machine.
+
+06. Make sure you unblock the system from accepting incoming connections.
+
+07. When the simulation module is activated, it asks for the name of a file
+	containing the domain to be loaded. The filename should include the path
+	relative to `%DAMMAGE%`, and should use slashes instead of backslashes. So,
+	to load the example domain `english.pl` found in `%DAMMAGE%\domains\`, one
+	should type `"./domains/english.pl".` when prompted as above for a domain.
+
+08. Once the domain is loaded, the simulation commences, and the registration
+	module waits for agents to join and participate in the simulated domain.
+
+09. Example agents for the domain `%DAMMAGE%\domains\english.pl` can be found
+	in `%DAMMAGE%\agents\`, and can be activated by executing the command files
+	in `%DAMMAGE%` numbered 6. Real users can also participate in a simulated
+	domain, by executing the command files in `%DAMMAGE%` numbered 7 and/or 8,
+	and entering the actions they wish to invoke in the user module interface.
+
+10. Type `shutdown.` in the administration module interface to exit the system.
+		
+00. Please contact the author with any comments, questions, and bug reports.

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MultiAgentz[
+   <!ELEMENT MultiAgentz ANY>
+   <!ELEMENT ConnectionDetails ANY>
+   <!ELEMENT Socket ANY>
+   <!ELEMENT Host ANY>
+   <!ELEMENT HistoryFileDetails ANY>
+   <!ELEMENT Path ANY>
+   <!ELEMENT DataSource ANY>
+   <!ELEMENT Icons ANY>
+   <!ELEMENT Extension ANY>
+   <!ATTLIST Socket id ID #REQUIRED>
+   <!ATTLIST Host id ID #REQUIRED>
+   <!ATTLIST Path id ID #REQUIRED>
+   <!ATTLIST DataSource id ID #REQUIRED>
+   <!ATTLIST Extension id ID #REQUIRED>
+]>
+<MultiAgentz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ConnectionDetails>
+    <Socket id="ObservationPort">5200</Socket>
+    <Host id="ObservationHost">127.0.0.1</Host>
+    <Socket id="AdministrationPort">5100</Socket>
+    <Host id="AdministrationHost">127.0.0.1</Host>
+  </ConnectionDetails>
+  <HistoryFileDetails>
+    <Path id="HistPath">D:\C# Projects\CrystalFire\CrystalFire\bin\Debug\myhist.db</Path>
+    <Path id="DmgPath">D:\#Recent_desktop\UNI\PES602\DMG\dammage 1.0\domains\elnglish.vs</Path>
+  </HistoryFileDetails>
+  <!-- Valid values for data source: LogFile and Socket-->
+  <DataSource id="DataSrc">Logfile</DataSource>
+  <Icons>
+    <Path id="IconPath">D:\C# Projects\AgentsRebuilt\AgentsRebuilt\Images</Path>
+    <Extension id="IconExt">jpg</Extension>
+  </Icons>
+</MultiAgentz>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="CrystalFire.Windows.InitialSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mode of Operation" Height="263" Width="299">
+    <Grid Margin="0,0,0,0">
+        <Label Content="What would you like to do?" HorizontalAlignment="Left" Margin="23,21,0,0" VerticalAlignment="Top"/>
+        <Button Content="Replay simulation from a file" HorizontalAlignment="Left" Height="26" Margin="39,69,0,0" VerticalAlignment="Top" Width="217" Click="OnReplayButton"/>
+        <Button Content="Run a new simulation" HorizontalAlignment="Left" Height="26" Margin="39,111,0,0" VerticalAlignment="Top" Width="217" Click="OnNewSimulationButton"/>
+        <Button Content="Connect to a running simulation" HorizontalAlignment="Left" Height="26" Margin="39,153,0,0" VerticalAlignment="Top" Width="217"/>
+        
+    </Grid>
+</Window>

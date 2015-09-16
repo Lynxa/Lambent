@@ -1,0 +1,19 @@
+﻿<Window x:Class="CrystalFire.SocketConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Configuration Settings" Height="281" Width="465" ResizeMode="NoResize" Topmost="True" Loaded="Window_Initialized">
+    <Grid Margin="0,0,0,1">
+
+        <Label Content="ObservationHost:" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBox2" HorizontalAlignment="Left" Height="26" Margin="141,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <Label Content="Socket:" HorizontalAlignment="Left" Margin="31,111,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Height="26" Margin="141,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <Button Name="SaveCfgBtn" Content="Apply" HorizontalAlignment="Left" Height="28" Margin="339,171,0,0" VerticalAlignment="Top" Width="95" Click="SaveCfgBtn_Click"/>
+        <Button x:Name="SaveExitCfgBtn" Content="Ok" HorizontalAlignment="Left" Height="28" Margin="30,171,0,0" VerticalAlignment="Top" Width="95" Click="SaveExitCfgBtn_Click"/>
+        <Button x:Name="CgfCancelBtn" Content="Cancel" HorizontalAlignment="Left" Height="28" Margin="188,171,0,0" VerticalAlignment="Top" Width="95" Click="CgfCancelBtn_Click"/>
+        <Label Content="Visualization file:" HorizontalAlignment="Left" Margin="31,25,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="26" Margin="141,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <Button x:Name="iconOpenBtn"  Content="Browse" HorizontalAlignment="Left" Height="23" Margin="366,26,0,0" VerticalAlignment="Top" Width="68" Click="iconOpenBtn_Click"/>
+
+    </Grid>
+</Window>
